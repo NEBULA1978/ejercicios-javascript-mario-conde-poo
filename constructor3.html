@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor 2</title>
+    <script>
+        function Coche(color, marca, kilometros){
+            //guarda lo que le pasamos como argumento hacia abajo
+            this.color = color;
+            this.marca = marca;
+            this.kilometros = kilometros;
+            //guarda lo que le pasamos como argumento hacia arriba
+            this.info = 'Este es de la marca ' + this.marca + '.Es de color' + this.color + ' y tiene ' + this.kilometros + 'kilometros';
+            //funcion anonima
+            this.mostrarInfo = function(){
+                alert(this.info);
+            }
+        }
+        //creamos instancias
+        var coche1 = new Coche('Blanco','Renault','32000');
+        var coche2 = new Coche('Rojo','Peugeot','38000');
+        
+
+
+    </script>
+</head>
+<body>
+        <input type="button" value="Mostrar info Reanault" onclick="coche1.mostrarInfo()"/>
+        <input type="button" value="Mostrar info Peugeot" onclick="coche2.mostrarInfo()"/>
+
+</body>
+</html>

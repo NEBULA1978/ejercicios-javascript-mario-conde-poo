@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor 2</title>
+    <script>
+        function Persona(nombrePersona){
+            this.nombre = nombrePersona;
+            this.info = 'Esta persona se llama ' + this.nombre;
+            //funcion anonima
+            this.mostrarInfo = function(){
+                alert(this.info);
+            }
+        }
+        //creamos instancias
+        var persona1 = new Persona('Eva');
+        var persona2 = new Persona('Ramón');
+
+
+    </script>
+</head>
+<body>
+        <input type="button" value="Mostrar info Eva" onclick="persona1.mostrarInfo()"/>
+        <input type="button" value="Mostrar info Ramón" onclick="persona2.mostrarInfo()"/>
+
+</body>
+</html>

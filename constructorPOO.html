@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>singleton</title>
+    <script>
+        function miTipoObjeto() {
+            this.info = 'Soy un nuevo objeto basico';
+            this.mostrarInfo = function() {
+                alert(this.info);
+            }
+            this.configurarInfo = function(nuevaInfo) {
+                this.info = nuevaInfo;
+            }
+        }
+
+        var miNuevoObjeto1 = new miTipoObjeto();
+        var miNuevoObjeto2 = new miTipoObjeto();
+        var miNuevoObjeto3 = new miTipoObjeto();
+    </script>
+</head>
+
+<body>
+    <input type="button" value="Mostrar info 1" onclick="miNuevoObjeto1.mostrarInfo()" />
+
+    <input type="button" value="Mostrar info 2" onclick="miNuevoObjeto2.mostrarInfo()" />
+    <input type="button" value="Mostrar info 3" onclick="miNuevoObjeto3.mostrarInfo()" />
+    <input type="button" value="Cambiar info de objeto1" onclick="miNuevoObjeto1.configurarInfo('Nueva Informacion')" />
+    <input type="button" value="Cambiar info de objeto2" onclick="miNuevoObjeto2.configurarInfo('Nueva Informacion')" />
+    <input type="button" value="Cambiar info de objeto3" onclick="miNuevoObjeto3.configurarInfo('Nueva Informacion')" />
+
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json</title>
+</head>
+
+<body>
+    <h1>Estos objetos pueden ser convertidos facilmente a strins para intercambios.</h1>
+    <h2>Pero lo importante es que un objeto Json es un objeto javaScript normal.</h2>
+    <h2>Notacion simple y compacta para objetos javaScript</h2>
+    <h3>Podemos analizarr y ejecutar el codigo Json solo con javaScript sin necesitar un analizador externo,</h3>
+    <h2>La sintaxis Jsom se basas en Pares : nombre,valor.</h2>
+
+    <script>
+        var usuario = '{"nombreUsuario" : "Rosa Blanca", "pais" : "España", "altura : 1.75}';
+
+        //var miObjeto = eval('(' + usuario +')');
+        var miObjeto = JSON.prase(usuaro);
+        document.write("Su nombre es: " + miObjeto.nombreUsuario + ", es de " + miObjeto.pais + " y mide: " + miObjeto.altura);
+        console.log(miObjeto);
+    </script>
+</body>
+
+</html>

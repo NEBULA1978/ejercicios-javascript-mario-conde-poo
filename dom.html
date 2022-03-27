@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <script>
+        window.onload = contarListaItems;
+
+        function contarListaItems() {
+            var elemento01 = document.getElementById("listaTareas");
+            //para acceder a los nodos hijos
+            //elemento01.childNodes
+            var cuenta = 0;
+            for (var i = 0; i < elemento01.childNodes.lenght - 1; i++) {
+                if (elemento01.childNodes[i].nodeType == 1) cuenta++;
+            }
+            alert("La lista ordenada contiene " + cuenta + " items");
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Cosas que hacer</h1>
+    <ol id="listaTareas">
+        <li>Terminar el guion</li>
+        <li>Preparar los graficos</li>
+        <li>Grabar la primera parte</li>
+        <li>Grabar la primera parte</li>
+        <li>Grabar la primera parte</li>
+    </ol>
+    <p id="notasLista">
+        Asegurate de terminar antes de las 9 para ver el siguiente capitulo
+    </p>
+</body>
+
+</html>

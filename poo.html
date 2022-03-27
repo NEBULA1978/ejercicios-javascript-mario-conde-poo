@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+    <script>
+        miNuevoObjeto = new Object();
+        miNuevoObjeto.info = 'Soy un objeto basico';
+
+        function miFun(){
+            alert(this.info);
+        }
+        //metodo asignamos a funcion no llamamos aqui
+        miNuevoObjeto.mostrarInfo = miFun;
+
+    </script>
+
+
+</head>
+<body>
+    <input type="button" value="Lamada a miFun" onclick="miFun()"/>
+    <input type="button" value="Lamada a mostrarInfo Mal" onclick="mostrarInfo()"/>
+    <input type="button" value="Lamada a mostrarInfo Bien" onclick="miNuevoObjeto.mostrarInfo()"/>
+
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herencia Prototype</title>
+    <script>
+        function Domestico() {
+            this.animal = "";
+            this.nombre = "";
+            this.configurarAnimal = function(nuevoAnimal) {
+                    this.animal = nuevoAnimal
+                }
+                //funcion anonima
+            this.configurarNombre = function(nuevoNombre) {
+                this.nombre = nuevoNombre;
+            }
+        }
+        //creamos instancias
+        var miGato = new Domestico();
+        miGato.configurarAnimal = ('gato');
+        miGato.configurarNombre = ('Bartolo');
+
+        //heredamos y creamos otro objeto
+        Perro.prototype = new Domestico();
+        //metodo perro
+        function Perro() {
+            this.raza = "Sanbernardo";
+            this.configurarRaza = function(nuevaRaza) {
+                    this.raza = nuevaRaza;
+                }
+                //metodo
+            this.mostrarInfo = function() {
+                alert(this.nombre + " es un " + this.raza);
+            }
+        }
+        //creamos instancias
+        var miPerro = new Perro();
+        miPerro.configurarNombre = ('Montano');
+        miPerro.configurarRaza = ('Bartolo2');
+    </script>
+</head>
+
+<body>
+    <input type="button" value="Mostrar info Perro" onclick="miPerro.mostrarInfo()" />
+
+</body>
+
+</html>

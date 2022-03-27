@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prioridad de eventos</title>
+    <script>
+        function validarFormulario(){
+            document.getElementById("form1").onsubmit = function(){
+                var permitirSubmit = true;
+                if(document.getElementById("usuario").value == ""){
+                    alert("Campo nombre no puede estar en blanco");
+                }
+                if(permitirSubmit) alert("Datos correctos - Enviando Formulario");
+                return permitirSubmit;
+            }
+        }
+        window.onload = validarFormulario;
+    </script>
+</head>
+<body>
+    <a href="https://youtube.com" id="miEnlace">Enlace</a>
+
+    <script>
+        document.getElementById("miEnlace").onclick = function(){
+            this.href = "http://www.google.com";
+            return confirm("La pagina esta en mantenimiento. ¿Quieres ir ir a Google en su lugar");
+        }
+
+
+    </script>
+    <form id="form1">
+        Nombre:&nbsp; <input type="text value="" name="Nombre Usuario" id="usuario">[Campo Obligarorio]</br>
+        Telefono:&nbsp; <input type="text value="" name="telefono" id="phone">[Campo Opcional]</br>
+        <input type="submit" />
+
+    </form>
+</body>
+</html>
